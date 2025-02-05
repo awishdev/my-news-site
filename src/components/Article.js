@@ -8,7 +8,16 @@ function Article() {
     const myData = useOutletContext();
     const articles = myData.articles;
     const article = articles.find((article) => article.id === parseInt(id));
-    console.log(article);
-    return (<></>)
+   // console.log(article);
+    //render article content here
+
+    return (
+        <div>
+            <h1>{article.title}</h1>
+            <h2>Author: {article.author}</h2>
+            <h3>Topic: {article.topic}</h3>
+            <p>{article.content}</p>
+        </div>
+    )
 }
 export default Article;
