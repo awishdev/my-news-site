@@ -4,9 +4,10 @@ import { useOutletContext } from'react-router-dom';
 import AuthorCard from './AuthorCard.js';
 
 function Authors() {
+  // pull authors data from the context
   const myData = useOutletContext();
   const authors = myData.authors;
-
+  //create array of AuthorCard components for each author
   const authorList = authors.map((author) => ( <AuthorCard key={author.id} author={author} /> ));
 
 

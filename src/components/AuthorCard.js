@@ -1,6 +1,7 @@
 import React from "react";
 
 function AuthorCard({ author }) {
+    // render author's name and bio in a card format
 
     return (
         <div className="card">

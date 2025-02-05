@@ -4,11 +4,12 @@ import { useParams, useOutletContext } from'react-router-dom';
 
 
 function Article() {
+    //variables to hold article data
     const { id } = useParams();
     const myData = useOutletContext();
     const articles = myData.articles;
+    //find article in articles array by id and render its content
     const article = articles.find((article) => article.id === id);
-   // console.log(article);
     //render article content here
 
     return (

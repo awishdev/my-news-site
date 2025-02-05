@@ -10,7 +10,7 @@ function NewArticle(){
     const context = useOutletContext();
     const setArticles = context.setArticles;
     const articles = context.articles;
-
+    //handlers for form field changes
     const handleTopicChange = (e) => {
         setNewTopic(e.target.value);
     }
@@ -29,7 +29,6 @@ function NewArticle(){
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // submit the new article to the server here
         // post request to server with new article data
         fetch('http://localhost:3001/articles', {
             method: 'POST',

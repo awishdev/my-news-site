@@ -8,13 +8,13 @@ import { useOutletContext } from 'react-router-dom';
 
 
 function Home() {
-
+    // pull articles data from the context
     const myData = useOutletContext();
     const articles = myData.articles;
     //create array of NewsCard components for each article
     const newsCards = articles.map((article) => ( <NewsCard key={article.id} title={article.title} topic={article.topic} id={article.id} /> ));
-    console.log(articles);
-    console.log(newsCards);
+    //console.log(articles);
+    //console.log(newsCards);
 
     //render the list of news cards
     return (

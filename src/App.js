@@ -4,12 +4,12 @@ import './App.css';
 import NavBar from './components/NavBar';
 
 function App() {
-
+//state variables to hold website data
   //const [fetchedData, setFetchedData] = useState([]);
   const [articles, setArticles] = useState([]);
   const [authors, setAuthors] = useState([]);
 
-
+// fetch articles and authors from the server
     useEffect(() =>{
         fetch("http://localhost:3001/articles",{
           method: 'GET',
