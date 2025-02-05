@@ -52,7 +52,7 @@ function NewArticle(){
         setNewContent('');
     }
     return (
-        <form onSubmit={handleSubmit}>
+        <form className='new-article' onSubmit={handleSubmit}>
             <label>Title:</label>
             <input type="text" value={newTitle} onChange={handleTitleChange} />
             <label>Topic:</label>

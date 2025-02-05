@@ -7,7 +7,7 @@ function Article() {
     const { id } = useParams();
     const myData = useOutletContext();
     const articles = myData.articles;
-    const article = articles.find((article) => article.id === parseInt(id));
+    const article = articles.find((article) => article.id === id);
    // console.log(article);
     //render article content here
 

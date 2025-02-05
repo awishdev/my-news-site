@@ -20,4 +20,16 @@
   padding: 5px;
   display: inline-block;
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-article {
+  margin-top: 20px;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
