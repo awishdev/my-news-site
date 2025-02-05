@@ -12,7 +12,7 @@ function Home() {
     const myData = useOutletContext();
     const articles = myData.articles;
     //create array of NewsCard components for each article
-    const newsCards = articles.map((article) => ( <NewsCard key={article.id} title={article.title} topic={article.topic} /> ));
+    const newsCards = articles.map((article) => ( <NewsCard key={article.id} title={article.title} topic={article.topic} id={article.id} /> ));
     console.log(articles);
     console.log(newsCards);
 
