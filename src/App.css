@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+.button {
+  background-color: grey; /* Grey background */
+  color: white; /* White text for contrast */
+  border: 2px solid black; /* Black outline */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px 20px; /* Spacing inside the button */
+  font-size: 16px; /* Readable text size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth effect */
+}
+
+/* Hover effect */
+.button:hover {
+  background-color: darkgrey; /* Slightly darker grey on hover */
+  border-color: black; /* Keep the black outline */
+}
+
+.card {
+  border: 2px solid black;
+  border-radius: 8px; 
+  padding: 10px;
+  display: inline-block;
+}

@@ -1,1 +1,0 @@
-//component to render full article page

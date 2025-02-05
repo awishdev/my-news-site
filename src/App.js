@@ -1,23 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect} from "react";
+import { Outlet } from "react-router-dom";
+//import './App.css';
+import NavBar from './components/NavBar';
 
 function App() {
+
+  //const [fetchedData, setFetchedData] = useState([]);
+  const [articles, setArticles] = useState([]);
+  const [authors, setAuthors] = useState([]);
+
+
+    useEffect(() =>{
+        fetch("http://localhost:3001/articles",{
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+        .then(r => r.json())
+        .then(data => setArticles(data))
+        .catch(error => console.error(error));
+    }, []);
+    useEffect(() =>{
+      fetch("http://localhost:3001/authors",{
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(r => r.json())
+      .then(data => setAuthors(data))
+      .catch(error => console.error(error));
+  }, []);
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>The News Site</h1>
+        <NavBar/>
       </header>
+      <Outlet context={{articles, setArticles, authors, setAuthors}}/>
     </div>
   );
 }
